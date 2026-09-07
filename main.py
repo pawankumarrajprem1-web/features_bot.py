@@ -258,7 +258,6 @@ def main():
             
         welcome_text = (
             "⚙️ *ADVANCED QUIZ SETTINGS PANEL* ⚙️\n\n"
-        
             "<b>👇 Manage and customize all advanced modes for your quiz in real-time.</b>"
         )
         
