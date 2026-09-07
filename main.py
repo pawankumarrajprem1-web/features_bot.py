@@ -18,7 +18,7 @@ from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 # ⚙️ CONFIGURATION SECTION (यहाँ अपनी डिटेल्स भरें)
 # ====================================================================
 # अपना टेलीग्राम बॉट टोकन यहाँ डालें (या .env / Environment Variable से लोड करें)
-TELEGRAM_BOT_TOKEN = os.getenv("BOT_TOKEN", "Y")
+TELEGRAM_BOT_TOKEN = os.getenv("BOT_TOKEN", "8930988842:AAEzhm83w76uGG4UGEv0rN2f_r6NPapzauI")
 
 # लॉगिंग कॉन्फ़िगरेशन
 logging.basicConfig(
