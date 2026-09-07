@@ -257,9 +257,9 @@ def main():
             del user_pending_inputs[user_id]
             
         welcome_text = (
-            "⚙️ *STANDALONE FEATURE DASHBOARD* ⚙️\n\n"
-            "✨ _यहाँ से आप क्विज़ के सभी 12 एडवांस मोड्स को कंट्रोल और कस्टमाइज़ कर सकते हैं।_\n\n"
-            "👇 किसी भी विकल्प पर क्लिक करके उसकी सेटिंग्स बदलें:"
+            "⚙️ *ADVANCED QUIZ SETTINGS PANEL* ⚙️\n\n"
+            "✨ *Manage and customize all 12 advanced modes for your quiz in real-time.* \n\n"
+            "👇 *Tap any button below to update its settings* "
         )
         
         try:
