@@ -11,8 +11,28 @@ Description: Complete single-file standalone bot for testing the
 
 import os
 import logging
+import threading
+from flask import Flask
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
+
+# ====================================================================
+# 🌐 RENDER PORT BINDING & KEEP-ALIVE SERVER (टाइम-आउट रोकने के लिए)
+# ====================================================================
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "🤖 Telegram Bot is Alive and Running 24/7!"
+
+def run_flask():
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host='0.0.0.0', port=port)
+
+def keep_alive():
+    t = threading.Thread(target=run_flask)
+    t.daemon = True
+    t.start()
 
 # ====================================================================
 # ⚙️ CONFIGURATION SECTION (यहाँ अपनी डिटेल्स भरें)
@@ -221,6 +241,10 @@ def main():
     if TELEGRAM_BOT_TOKEN == "YOUR_BOT_TOKEN_HERE" or not TELEGRAM_BOT_TOKEN:
         print("❌ CRITICAL ERROR: Please provide a valid Telegram Bot Token in TELEGRAM_BOT_TOKEN variable or environment variables!")
         return
+
+    # Render पोर्ट बाइंडिंग शुरू करें
+    keep_alive()
+    logger.info("Flask keep-alive server started successfully for Render.")
 
     bot = telebot.TeleBot(TELEGRAM_BOT_TOKEN)
     logger.info("Initializing Standalone Feature Dashboard Bot...")
