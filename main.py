@@ -255,11 +255,11 @@ def main():
         
         if user_id in user_pending_inputs:
             del user_pending_inputs[user_id]
-            
-        welcome_text = (
+          
+      welcome_text = (
             "⚙️ *ADVANCED QUIZ SETTINGS PANEL* ⚙️\n\n"
-            "✨ *Manage and customize all 12 advanced modes for your quiz in real-time.* \n\n"
-            "👇 *Tap any button below to update its settings* "
+            "✨ _Manage and customize all 12 advanced modes for your quiz in real-time._ \n\n"
+            "👇 *Tap any button below to update its settings*"
         )
         
         try:
