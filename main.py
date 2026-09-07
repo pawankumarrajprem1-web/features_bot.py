@@ -38,7 +38,7 @@ def keep_alive():
 # ⚙️ CONFIGURATION SECTION (यहाँ अपनी डिटेल्स भरें)
 # ====================================================================
 # अपना टेलीग्राम बॉट टोकन यहाँ डालें (या .env / Environment Variable से लोड करें)
-TELEGRAM_BOT_TOKEN = os.getenv("BOT_TOKEN", "")
+TELEGRAM_BOT_TOKEN = os.getenv("BOT_TOKEN", "8930988842:AAEzhm83w76uGG4UGEv0rN2f_r6NPapzauI")
 
 # लॉगिंग कॉन्फ़िगरेशन
 logging.basicConfig(
@@ -257,8 +257,9 @@ def main():
             del user_pending_inputs[user_id]
             
         welcome_text = (
-            "⚙️ *ADVANCED QUIZ SETTINGS PANEL* ⚙️\n\n"
-            "<b>👇 Manage and customize all advanced modes for your quiz in real-time.</b>"
+            "⚙️ *STANDALONE FEATURE DASHBOARD* ⚙️\n\n"
+            "✨ _यहाँ से आप क्विज़ के सभी 12 एडवांस मोड्स को कंट्रोल और कस्टमाइज़ कर सकते हैं।_\n\n"
+            "👇 किसी भी विकल्प पर क्लिक करके उसकी सेटिंग्स बदलें:"
         )
         
         try:
